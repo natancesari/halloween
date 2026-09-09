@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Vortex Halloween Rug</title>
+    <style>
+        /* Base Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Fundo escuro temático de Halloween */
+            background-color: #121212; 
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Main Container */
+        .presell-container {
+            width: 100%;
+            max-width: 480px;
+            background-color: #1E1E1E; /* Cinza escuro para destacar do fundo */
+            border-radius: 16px;
+            padding: 40px 20px;
+            text-align: center;
+            /* Sombra sutil laranja para dar um clima "glowing" */
+            box-shadow: 0 10px 30px rgba(230, 81, 0, 0.15); 
+            border-top: 5px solid #FF6D00; /* Larga vibrante no topo */
+        }
+
+        /* Title */
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            /* Gradiente sutil no título para mais impacto */
+            background: linear-gradient(90deg, #FFFFFF, #FFD54F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* GIF Container */
+        .gif-container {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 35px;
+            /* Borda sutil para emoldurar o GIF */
+            border: 2px solid #333333; 
+        }
+
+        .gif-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* Garante que o GIF ocupe o espaço corretamente */
+            object-fit: cover; 
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: block;
+            width: 100%;
+            background-color: #FF6D00; /* Laranja Abóbora Vibrante */
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 18px 10px;
+            border-radius: 50px; /* Botão arredondado mais moderno */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 6px 20px rgba(255, 109, 0, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efeito Hover no botão */
+        .cta-button:hover {
+            background-color: #E65100;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 109, 0, 0.6);
+        }
+
+        /* Efeito de pulso para chamar a atenção */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        .cta-button {
+            animation: pulse 2s infinite;
+        }
+
+        /* Footer / Legal Links */
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #888888;
+        }
+
+        .footer a {
+            color: #888888;
+            text-decoration: none;
+            margin: 0 8px;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+
+        .footer a:hover {
+            color: #FF6D00;
+            text-decoration: underline;
+        }
+
+        /* MODAL STYLES (Mesmo sistema das caixinhas brancas) */
+        .modal-overlay {
+            display: none; 
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro para o tema */
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: #1E1E1E; /* Caixa escura */
+            color: #DDDDDD; /* Texto claro */
+            padding: 30px 25px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 400px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            text-align: left;
+            border: 1px solid #333333;
+        }
+
+        .modal-content h3 {
+            color: #FF6D00;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .modal-content p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #888;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: #FF6D00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="presell-container">
+        
+        <!-- Título -->
+        <h1>3D Vortex Rug</h1>
+
+        <!-- Local do GIF -->
+        <div class="gif-container">
+            <!-- Substitua 'seu-tapete.gif' pelo nome exato do seu arquivo de imagem -->
+            <img src="decoração.halloween.gif" alt="3D Vortex Halloween Rug Illusion" class="gif-image">
+        </div>
+
+        <!-- Botão de Compra -->
+        <a href="https://www.firewolftrack.com/329S9ZBB/24KXFZW8/" class="cta-button">
+            Get Yours Now
+        </a>
+
+        <!-- Rodapé Legal -->
+        <div class="footer">
+            <a onclick="openModal('modal-privacy')">Privacy Policy</a> | 
+            <a onclick="openModal('modal-terms')">Terms of Service</a> | 
+            <a onclick="openModal('modal-contact')">Contact</a>
+        </div>
+
+    </div>
+
+    <!-- Modais (Caixinhas) -->
+    
+    <div id="modal-privacy" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-privacy')">&times;</span>
+            <h3>Privacy Policy</h3>
+            <p>We respect your privacy. This page acts as a bridge to the official product site and does not collect any personal or payment information.</p>
+        </div>
+    </div>
+
+    <div id="modal-terms" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-terms')">&times;</span>
+            <h3>Terms of Service</h3>
+            <p>By using this site, you acknowledge that it is an informational presell page. All purchases, shipping, and guarantees are handled securely on the official manufacturer's website.</p>
+        </div>
+    </div>
+
+    <div id="modal-contact" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-contact')">&times;</span>
+            <h3>Contact Support</h3>
+            <p>If you need assistance regarding an order, please contact the official store directly through their checkout page.</p>
+            <p>For inquiries regarding this specific page, email: <a href="mailto:support@helpdeskall.com" style="color: #FF6D00; text-decoration: none;">support@helpdeskall.com</a></p>
+        </div>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal-overlay')) {
+                event.target.style.display = "none";
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+
+</body>
+</html>
